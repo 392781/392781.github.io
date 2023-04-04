@@ -1,15 +1,42 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.3/css/academicons.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css");
+
 html { scroll-behavior: smooth;}
 
+.hero-body {
+  position: relative;
+}
+
+.main-hero {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  background-image: url('img/background.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.3;
+}
+
+.navbar-brand {
+  background-color: rgba(0,0,0,10%);
+}
+
+#navbar-menu {
+  background: rgba(0,0,0,10%);
+}
 
 @media screen and (max-width: 1023px) {
   /* make navbar-menu open on top of content     */
-  .navbar-menu { left:0; right:0; top:100%; position: absolute; opacity: 90%;}
-
-  .navbar-item { opacity: 100%; }
+  .navbar-menu { left:0; right:0; top:100%; position: absolute; }
   
   /* show mavbar-menu on screen less than 1024px */
   #menu-toggle:checked ~ .navbar-menu { display: block; }
-
+  
   /* make navbar-burger become cross on screen less than 1024px */
   #menu-toggle:checked ~ .navbar-brand > label > span:nth-child(1) { transform: translateY(5px) rotate(45deg); }
   #menu-toggle:checked ~ .navbar-brand > label > span:nth-child(2) { opacity: 0; }

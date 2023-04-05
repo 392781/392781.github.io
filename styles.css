@@ -18,6 +18,8 @@ html { scroll-behavior: smooth;}
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  min-width: 100%;
+  min-height: 100%;
   opacity: 0.3;
 }
 

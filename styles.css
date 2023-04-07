@@ -14,7 +14,11 @@ html { scroll-behavior: smooth;}
   right: 0;
   left: 0;
   bottom: 0;
-  background-image: url('img/background.webp'), url('img/background.avif'), url('img/background.jpg');
+  background-image: url('img/background.jpg');
+  background-image: image-set(
+    "img/background.webp" type("image/webp"), 
+    "img/background.jpg" type("image/jpeg")
+  );
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

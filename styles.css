@@ -4,6 +4,14 @@
 
 html { scroll-behavior: smooth;}
 
+a {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 .hero-body {
   position: relative;
 }

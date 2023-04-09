@@ -5,7 +5,7 @@
 html { scroll-behavior: smooth;}
 
 a {
-  display: flex;
+  display: block;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;

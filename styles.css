@@ -6,6 +6,7 @@ html { scroll-behavior: smooth;}
 
 a {
   display: block;
+  width: inherit;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;

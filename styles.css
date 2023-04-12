@@ -2,11 +2,9 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.3/css/academicons.min.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css");
 
-html { scroll-behavior: smooth;}
+html { scroll-behavior: smooth; }
 
-.hero-body {
-  position: relative;
-}
+.hero-body { position: relative; }
 
 .main-hero {
   position: absolute;
@@ -26,13 +24,9 @@ html { scroll-behavior: smooth;}
 }
 
 
-.navbar-brand {
-  background-color: rgba(0,0,0,10%);
-}
+.navbar-brand { background-color: rgba(0,0,0,10%); }
 
-#navbar-menu {
-  background: rgba(0,0,0,10%);
-}
+#navbar-menu { background: rgba(0,0,0,10%); }
 
 @media screen and (max-width: 1023px) {
   /* make navbar-menu open on top of content     */

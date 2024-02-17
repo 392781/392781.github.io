@@ -1,5 +1,5 @@
 # Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+name: Yearly Copyright Build and Update
 
 on:
   # Runs on midnight of January 1st

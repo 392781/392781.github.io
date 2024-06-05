@@ -42,7 +42,8 @@ p a:hover { text-decoration: underline; }
   #menu-toggle:checked ~ .navbar-menu { display: block; }
   
   /* make navbar-burger become cross on screen less than 1024px */
-  #menu-toggle:checked ~ .navbar-brand > label > span:nth-child(1) { transform: translateY(5px) rotate(45deg); }
-  #menu-toggle:checked ~ .navbar-brand > label > span:nth-child(2) { opacity: 0; }
-  #menu-toggle:checked ~ .navbar-brand > label > span:nth-child(3) { transform: translateY(-5px) rotate(-45deg); }
+  #menu-toggle:checked ~ .navbar-brand > label > span:nth-child(1) { transform: translateY(0px) rotate(45deg); }
+  #menu-toggle:checked ~ .navbar-brand > label > span:nth-child(2) { transform: translateY(0px) rotate(-45deg); }
+  #menu-toggle:checked ~ .navbar-brand > label > span:nth-child(3) { opacity: 0; }
+  #menu-toggle:checked ~ .navbar-brand > label > span:nth-child(4) { opacity: 0; }
 }

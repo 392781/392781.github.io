@@ -99,8 +99,9 @@ p a:hover { text-decoration: underline; }
   scroll-margin-top: 3.25rem; /* Set this value to your navbar height */
 }
 
-.navbar {
+.hero .navbar {
   backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.25);
 }
 
 .navbar-item {
@@ -114,8 +115,9 @@ p a:hover { text-decoration: underline; }
     scroll-margin-top: 6.25rem; /* Set this value to your navbar height */
   }
 
-  .navbar {
+  .hero .navbar {
     backdrop-filter: none;
+    background: rgba(0,0,0,0.0);
   }
 
   /* Chrome bullshit: https://www.reddit.com/r/Frontend/comments/xm2ft0/cant_get_backdropfilter_blur16px_to_work_in/?rdt=48128 */
@@ -127,7 +129,7 @@ p a:hover { text-decoration: underline; }
     bottom: 0;
     backdrop-filter: blur(10px); /* Apply the blur effect */
     -webkit-backdrop-filter: blur(10px); /* WebKit compatibility */
-    background: rgba(0, 0, 0, 0.2); /* Semi-transparent background color */
+    background: rgba(0, 0, 0, 0.25); /* Semi-transparent background color */
     z-index: 0; /* Make sure it is behind the content */
   }
 

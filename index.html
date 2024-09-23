@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Ronald Lencevičius | PhD Student</title>
+	<title>Ronald Lencevičius | PhD Researcher</title>
 	<meta charset="utf-8">
   <meta name="description" content="My personal PhD portfolio website."/>
   <meta name="keywords" content="Ron, Ronald, Ronaldas, Lencevicius, Lencevičius, RPLencevicius, RP Lencevicius"/>
@@ -10,7 +10,7 @@
   <meta property="og:image" content="https://ronaldas.dev/img/bear.jpg"/>
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
-  <meta property="og:title" content="Ronald Lencevičius | PhD Student"/>
+  <meta property="og:title" content="Ronald Lencevičius | PhD Researcher"/>
   <meta property="og:description" content="My personal PhD portfolio website."/>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel="icon" type="image/png" href="img/catpix_std.png"/>
@@ -29,9 +29,10 @@
     
     <!-- Hero head: responsive navbar -->
     <div class="hero-head">
-      <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
-        <input type="checkbox" id="menu-toggle" name="menu-toggle" class="is-hidden">
-        <div class="navbar-brand">
+      <nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="container">
+          <input type="checkbox" id="menu-toggle" name="menu-toggle" class="is-hidden">
+          <div class="navbar-brand">
             <a class="navbar-item" href="https://github.com/392781/" target="_blank" aria-label="GitHub">
               <span class="icon is-medium"><i class="fab fa-github fa-fw fa-2x"></i></span>
             </a>
@@ -45,22 +46,23 @@
               <span class="icon is-medium"><i class="fa-solid fa-envelopes-bulk fa-2x"></i></span>
             </a>
             <label for="menu-toggle" class="navbar-burger burger">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </label>
-        </div> 
-        <!-- content -->
-        <div class="navbar-menu" id="navbar-menu"> 
-          <div class="navbar-end has-text-centered">
-            <a class="navbar-item" href="#about">About Me</a>
-            <a class="navbar-item" href="#research">Research</a>
-            <a class="navbar-item" href="#presentations">Presentations</a>
-            <a class="navbar-item" href="#activities">Activities</a>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </label>
+          </div>
+          
+          <div class="navbar-menu">
+            <div class="navbar-end has-text-centered">
+              <a class="navbar-item" href="#about">About</a>
+              <a class="navbar-item" href="#research">Research</a>
+              <a class="navbar-item" href="#presentations">Presentations</a>
+              <a class="navbar-item" href="#activities">Activities</a>
+            </div>
           </div>
         </div>
-      </nav>    
+      </nav>
     </div>
     
     <!-- Hero content: will be in the middle -->
@@ -68,7 +70,11 @@
       <div class="container has-text-centered">
         <div class="column">
           <h2 class="title is-2"><tt>Ronald Lencevičius</tt></h2>
-          <h3 class="subtitle is-4">PhD Student</h3>
+          <h3 class="subtitle is-4">
+            <div class="type">
+              PhD Researcher
+            </div>
+          </h3>
         </div>
         <figure class="image is-128x128 is-inline-block">
           <picture>
@@ -98,7 +104,7 @@
   </section>
 	<section class="section" id="about">
     <div class="container">
-      <div class="content is-medium is-max-desktop">
+      <div class="content is-medium is-max-de</section>sktop">
         <p>
           My name is Ronaldas Paulius Lencevičius (though I go by Ronald) and I'm a statistics PhD student in the Department of Statistics & Applied Probability (PSTAT) @ University of California, Santa Barbara. Previously, I completed a double B.S. in Computer Science and Applied Mathematics as well as a M.S. in Statistics @ California State Polytechnic University, Pomona.
         </p>  
@@ -278,19 +284,15 @@
                     Workshop on Container-driven Reproducible Research
                   </p>
                 </div>
-                <div class="media-right">
+                <div class="icon-container">
                   <figure class="image is-48x48">
                     <source type="image/webp" srcset="img/UCSB.webp">
                     <img src="img/UCSB.png" alt="University of California, Santa Barbara">
                   </figure>
-                </div>
-                <div class="media-right">
                   <figure class="image is-48x48">
                     <source type="image/webp" srcset="img/DREAM_Lab.webp">
                     <img src="img/DREAM_Lab.png" alt="UCSB DREAM Lab logo">
                   </figure>
-                </div>
-                <div class="media-right">
                   <figure class="image is-48x48">
                     <source type="image/webp" srcset="img/cnsi-logo.webp">
                     <img src="img/cnsi-logo.png" alt="CNSI logo">
@@ -511,7 +513,8 @@
           <div class="content">
             <h4>Conference Reviewer</h4>
             <ul>
-              <li>TBA... ;^)</li>
+              <li>38th Conference and Workshop on Neural Information Processing Systems — <em>Vancouver, Canada</em> | 2024</li>
+              <li>More TBA... ;^)</li>
             </ul>
           </div>
         </div>
@@ -547,12 +550,12 @@
   <footer class="footer">
       <div class="container">
           <div class="content has-text-centered">
-              <p><tt>
+              <p>
                 <i class="fa-regular fa-copyright"></i>
                 <span id="copyright-year">2024</span>
                 <span>Ronald Lencevičius</span>
                 <span><a href="mailto:contact@ronaldas.dev">contact@ronaldas.dev</a></span>
-              </p></tt>
+              </p>
               <p>👨‍💻 with 💚 using <a href="https://bulma.io/">Bulma</a> and <a href="https://openai.com/">ChatGPT</a></p>
           </div>
       </div>

@@ -1,8 +1,41 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.3/css/academicons.min.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.0/css/bulma.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-html { scroll-behavior: smooth; }
+.atkinson-hyperlegible-regular {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.atkinson-hyperlegible-bold {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.atkinson-hyperlegible-regular-italic {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.atkinson-hyperlegible-bold-italic {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+html { 
+  scroll-behavior: smooth; 
+  font-size: 115%;
+}
+
+html, body, .title, .subtitle, .navbar-item {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+}
 
 p > a:hover { text-decoration: underline; }
 
@@ -29,17 +62,50 @@ p a:hover { text-decoration: underline; }
   object-fit: cover;
 }
 
+.hero {
+  scroll-margin-top: 3.25rem; /* Set this value to your navbar height */
+}
 
-.navbar-brand { background-color: rgba(0,0,0,10%); }
+.hero .navbar { backdrop-filter: blur(10px); background-color: rgba(0, 0, 0, 0.2);}
 
-#navbar-menu { background: rgba(0,0,0,10%); }
+.title.is-5 {
+  overflow: hidden; /* Hide overflow content */
+}
 
 @media screen and (max-width: 1023px) {
-  /* make navbar-menu open on top of content     */
-  .navbar-menu { left:0; right:0; top:100%; position: absolute; }
+  /* make navbar-menu open on top of content */
+
+  .hero {
+    scroll-margin-top: 6.25rem; /* Set this value to your navbar height */
+  }
+
+  .navbar-menu { 
+    /* padding: 0.5em; */
+    left:0; 
+    right:0; 
+    top:100%; 
+    position: absolute; 
+    justify-content: center;
+    overflow-x: hidden;
+    backdrop-filter: blur(10px); 
+    background: rgba(0,0,0,0.2); 
+  }
+
+  /* Navbar items styling */
+  .navbar-menu .navbar-item {
+    display: inline-block; /* Display items inline */
+    padding: 0.25em;
+    margin: 0;
+    border-radius: 5px;
+  }
   
   /* show mavbar-menu on screen less than 1024px */
-  #menu-toggle:checked ~ .navbar-menu { display: block; }
+  #menu-toggle:checked ~ .navbar-menu { 
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
   
   /* make navbar-burger become cross on screen less than 1024px */
   #menu-toggle:checked ~ .navbar-brand > label > span:nth-child(1) { transform: translateY(0px) rotate(45deg); }
@@ -47,3 +113,69 @@ p a:hover { text-decoration: underline; }
   #menu-toggle:checked ~ .navbar-brand > label > span:nth-child(3) { opacity: 0; }
   #menu-toggle:checked ~ .navbar-brand > label > span:nth-child(4) { opacity: 0; }
 }
+
+/* Cool typing effect */
+
+:root {
+  --characters: 14;
+}
+
+.subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.type {
+  max-width: calc(var(--characters) * 1ch);
+  animation: typing 1.75s steps(var(--characters)), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 1px solid;
+  font-family: monospace;
+}
+@keyframes typing {
+  from {
+    max-width: 0;
+  }
+}    
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Base styling for the icon container */
+.icon-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Default: 2 columns */
+  gap: 0.5rem; /* Space between icons */
+  align-items: center;
+  justify-items: center;
+}
+
+/* 3 columns on large screens */
+@media screen and (min-width: 1024px) {
+  .icon-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for large screens */
+  }
+}
+
+/* Additional styling */
+.icon-container .image {
+  margin-bottom: 0;
+  max-width: 48px; /* Adjust as needed */
+}
+
+.icon-container img {
+  width: 100%;
+}
+
+/* Align the icon with the text */
+.footer i.fa-copyright {
+  vertical-align: middle; /* Aligns the icon to the middle of the text */
+  font-size: 1em; /* Adjust size to match text size */
+  line-height: 1; /* Ensure the icon's line height is consistent with the text */
+  margin-right: 0.2em; /* Adds a little space after the icon */
+}
+
+

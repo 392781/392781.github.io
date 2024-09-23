@@ -38,6 +38,11 @@ html, body, .title, .subtitle, .navbar-item {
   font-family: "Atkinson Hyperlegible", sans-serif;
 }
 
+/* Fix for random scrolling in card elements */
+.title.is-5 {
+  overflow: hidden;
+}
+
 p > a:hover { text-decoration: underline; }
 
 p a:hover { text-decoration: underline; }
@@ -67,10 +72,12 @@ p a:hover { text-decoration: underline; }
   scroll-margin-top: 3.25rem; /* Set this value to your navbar height */
 }
 
-.hero .navbar { backdrop-filter: blur(10px); background-color: rgba(0, 0, 0, 0.2);}
+.navbar {
+  backdrop-filter: blur(10px);
+}
 
-.title.is-5 {
-  overflow: hidden; /* Hide overflow content */
+.navbar-item {
+  border-radius: 5px;
 }
 
 @media screen and (max-width: 1023px) {
@@ -80,16 +87,33 @@ p a:hover { text-decoration: underline; }
     scroll-margin-top: 6.25rem; /* Set this value to your navbar height */
   }
 
+  .navbar {
+    backdrop-filter: none;
+  }
+
+  /* Chrome bullshit: https://www.reddit.com/r/Frontend/comments/xm2ft0/cant_get_backdropfilter_blur16px_to_work_in/?rdt=48128 */
+  .visual-layer {
+    position: absolute; /* Position it absolutely within the parent */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(10px); /* Apply the blur effect */
+    -webkit-backdrop-filter: blur(10px); /* WebKit compatibility */
+    background: rgba(0, 0, 0, 0.2); /* Semi-transparent background color */
+    z-index: 0; /* Make sure it is behind the content */
+  }
+
   .navbar-menu { 
-    /* padding: 0.5em; */
     left:0; 
     right:0; 
     top:100%; 
     position: absolute; 
     justify-content: center;
     overflow-x: hidden;
-    backdrop-filter: blur(10px); 
-    background: rgba(0,0,0,0.2); 
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background: rgba(0,0,0,0.0);
   }
 
   /* Navbar items styling */

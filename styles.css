@@ -3,6 +3,7 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.0/css/bulma.min.css");
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+/* https://www.brailleinstitute.org/freefont/ */
 .atkinson-hyperlegible-regular {
   font-family: "Atkinson Hyperlegible", sans-serif;
   font-weight: 400;
@@ -114,8 +115,7 @@ p a:hover { text-decoration: underline; }
   #menu-toggle:checked ~ .navbar-brand > label > span:nth-child(4) { opacity: 0; }
 }
 
-/* Cool typing effect */
-
+/* Cool typing effect: https://dev.to/stokry/typing-effect-without-javascript-54ol*/
 :root {
   --characters: 14;
 }

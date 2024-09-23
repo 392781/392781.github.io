@@ -1,7 +1,7 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.3/css/academicons.min.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.0/css/bulma.min.css");
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 /* https://www.brailleinstitute.org/freefont/ */
 .atkinson-hyperlegible-regular {
@@ -28,6 +28,29 @@
   font-style: italic;
 }
 
+.ubuntu-mono-regular {
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ubuntu-mono-bold {
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.ubuntu-mono-regular-italic {
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.ubuntu-mono-bold-italic {
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 700;
+  font-style: italic;
+}
 
 html { 
   scroll-behavior: smooth; 
@@ -36,6 +59,10 @@ html {
 
 html, body, .title, .subtitle, .navbar-item {
   font-family: "Atkinson Hyperlegible", sans-serif;
+}
+
+#name1, #name2 {
+  font-family: "Ubuntu Mono", monospace;
 }
 
 /* Fix for random scrolling in card elements */
@@ -155,8 +182,8 @@ p a:hover { text-decoration: underline; }
   white-space: nowrap;
   overflow: hidden;
   border-right: 1px solid;
-  font-family: monospace;
 }
+
 @keyframes typing {
   from {
     max-width: 0;

@@ -66,7 +66,7 @@ html, body, .title, .subtitle, .navbar-item {
 }
 
 /* Fix for random scrolling in card elements */
-.title.is-5 {
+#card-title {
   overflow: hidden;
 }
 
@@ -230,5 +230,3 @@ p a:hover { text-decoration: underline; }
   line-height: 1; /* Ensure the icon's line height is consistent with the text */
   margin-right: 0.2em; /* Adds a little space after the icon */
 }
-
-

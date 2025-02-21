@@ -230,3 +230,50 @@ p a:hover { text-decoration: underline; }
   line-height: 1; /* Ensure the icon's line height is consistent with the text */
   margin-right: 0.2em; /* Adds a little space after the icon */
 }
+
+.masonry {
+  column-count: 1; 
+  column-gap: 1rem;
+}
+
+.masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-rows: masonry;
+  gap: 1rem;
+}
+
+.masonry-item {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth effect */
+}
+
+.masonry-item:hover {
+  transform: scale(1.05); /* Slight zoom */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+/* Ensure the effect works on touchscreens */
+@media (hover: none) {
+  .masonry-item:active {
+      transform: scale(1.05);
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Responsive column count */
+@media screen and (min-width: 768px) {
+  .masonry {
+      column-count: 2;
+  }
+}
+
+.card {
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}

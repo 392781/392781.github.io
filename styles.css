@@ -236,17 +236,11 @@ p a:hover { text-decoration: underline; }
   column-gap: 1rem;
 }
 
-.masonry-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-template-rows: masonry;
-  gap: 1rem;
-}
-
 .masonry-item {
   display: inline-block;
   width: 100%;
   margin-bottom: 1rem;
+  break-inside: avoid;
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth effect */
 }
 
@@ -268,12 +262,4 @@ p a:hover { text-decoration: underline; }
   .masonry {
       column-count: 2;
   }
-}
-
-.card {
-  transition: transform 0.2s ease-in-out;
-}
-
-.card:hover {
-  transform: scale(1.03);
 }

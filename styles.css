@@ -110,16 +110,16 @@ p a:hover { text-decoration: underline; }
 
 @media screen and (max-width: 1023px) {
   /* make navbar-menu open on top of content */
-
+  
   .hero {
     scroll-margin-top: 6.25rem; /* Set this value to your navbar height */
   }
-
+  
   .hero .navbar {
     backdrop-filter: none;
     background: rgba(0,0,0,0.0);
   }
-
+  
   /* Chrome bullshit: https://www.reddit.com/r/Frontend/comments/xm2ft0/cant_get_backdropfilter_blur16px_to_work_in/?rdt=48128 */
   .visual-layer {
     position: absolute; /* Position it absolutely within the parent */
@@ -132,7 +132,7 @@ p a:hover { text-decoration: underline; }
     background: rgba(0, 0, 0, 0.25); /* Semi-transparent background color */
     z-index: 0; /* Make sure it is behind the content */
   }
-
+  
   .navbar-menu { 
     left:0; 
     right:0; 
@@ -144,7 +144,7 @@ p a:hover { text-decoration: underline; }
     backdrop-filter: blur(10px);
     background: rgba(0,0,0,0.0);
   }
-
+  
   /* Navbar items styling */
   .navbar-menu .navbar-item {
     display: inline-block; /* Display items inline */
@@ -252,14 +252,14 @@ p a:hover { text-decoration: underline; }
 /* Ensure the effect works on touchscreens */
 @media (hover: none) {
   .masonry-item:active {
-      transform: scale(1.05);
-      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   }
 }
 
 /* Responsive column count */
 @media screen and (min-width: 768px) {
   .masonry {
-      column-count: 2;
+    column-count: 2;
   }
 }

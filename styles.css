@@ -6,8 +6,8 @@
 /* https://www.brailleinstitute.org/freefont/ */
 .atkinson-hyperlegible-regular {
   font-family: "Atkinson Hyperlegible", sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 .atkinson-hyperlegible-bold {
@@ -50,6 +50,15 @@
   font-family: "Ubuntu Mono", monospace;
   font-weight: 700;
   font-style: italic;
+}
+
+* { 
+ cursor: url('img/cabbage.png'), auto !important; 
+}
+
+a, button, [role="button"], input[type="button"], input[type="submit"], .navbar-item, label[for],
+a *, button *, .navbar-item *, label[for] *, .card-footer-item, .card-footer-item * {
+  cursor: url('img/coins.png'), pointer !important;
 }
 
 html { 

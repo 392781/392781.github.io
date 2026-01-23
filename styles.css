@@ -143,6 +143,11 @@ p a:hover { text-decoration: underline; }
   #menu-toggle:checked ~ .navbar-brand > label > span:nth-child(2) { transform: translateY(0px) rotate(-45deg); }
   #menu-toggle:checked ~ .navbar-brand > label > span:nth-child(3) { opacity: 0; }
   #menu-toggle:checked ~ .navbar-brand > label > span:nth-child(4) { opacity: 0; }
+  
+  /* White hamburger menu */
+  .navbar-burger span {
+    background-color: white;
+  }
 }
 
 /* Cool typing effect: https://dev.to/stokry/typing-effect-without-javascript-54ol*/

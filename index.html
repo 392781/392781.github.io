@@ -41,8 +41,10 @@
   <section class="hero is-dark is-fullheight">
     <div class="main-hero">
       <picture>
-        <source type="image/webp" srcset="img/background~2-mobile.webp 450w, img/background~2.webp 1200w" sizes="100vw">
-        <source type="image/jpeg" srcset="img/background~2-mobile.jpg 450w, img/background~2.jpg 1200w" sizes="100vw">
+        <source type="image/webp" srcset="img/background~2-mobile.webp" media="(max-width: 768px)">
+        <source type="image/webp" srcset="img/background~2.webp" media="(min-width: 769px)">
+        <source type="image/jpeg" srcset="img/background~2-mobile.jpg" media="(max-width: 768px)">
+        <source type="image/jpeg" srcset="img/background~2.jpg" media="(min-width: 769px)">
         <img src="img/background~2.jpg" alt="Mountain background" fetchpriority="high">
       </picture>
     </div>

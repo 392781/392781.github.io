@@ -1,5 +1,71 @@
 /* External CSS loaded via <link> tags in HTML for parallel loading */
 
+/* Self-hosted fonts - Atkinson Hyperlegible family */
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('css/fonts/AtkinsonHyperlegibleNext-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('css/fonts/AtkinsonHyperlegibleNext-RegularItalic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('css/fonts/AtkinsonHyperlegibleNext-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('css/fonts/AtkinsonHyperlegibleNext-BoldItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Atkinson Hyperlegible Mono (replaces Ubuntu Mono) */
+@font-face {
+  font-family: 'Atkinson Mono';
+  src: url('css/fonts/AtkinsonHyperlegibleMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Atkinson Mono';
+  src: url('css/fonts/AtkinsonHyperlegibleMono-RegularItalic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Atkinson Mono';
+  src: url('css/fonts/AtkinsonHyperlegibleMono-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Atkinson Mono';
+  src: url('css/fonts/AtkinsonHyperlegibleMono-BoldItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
 /* Custom cursors - only on devices with hover (desktops) */
 @media (hover: hover) and (pointer: fine) {
   * { 
@@ -39,7 +105,7 @@ html, body, .title, .subtitle, .navbar-item {
 }
 
 #name1, #name2 {
-  font-family: "Ubuntu Mono", monospace;
+  font-family: "Atkinson Mono", monospace;
 }
 
 /* Fix for random scrolling in card elements */

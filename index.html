@@ -15,6 +15,11 @@
   <meta name="darkreader-lock">
   <meta name="color-scheme" content="light dark">
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="img/background~2-mobile.webp" type="image/webp" media="(max-width: 768px)">
+  <link rel="preload" as="image" href="img/background~2.webp" type="image/webp" media="(min-width: 769px)">
   <link rel="icon" type="image/png" href="img/catpix_std.png"/>
   <link rel="stylesheet" href="styles.css"/>
 </head>
@@ -24,8 +29,9 @@
   <section class="hero is-dark is-fullheight">
     <div class="main-hero">
       <picture>
-        <source type="image/webp" srcset="img/background~2.webp">
-        <img src="img/background~2.jpg" alt="Mountain background">
+        <source type="image/webp" srcset="img/background~2-mobile.webp 750w, img/background~2.webp 1500w" sizes="100vw">
+        <source type="image/jpeg" srcset="img/background~2-mobile.jpg 562w, img/background~2.jpg 1500w" sizes="100vw">
+        <img src="img/background~2.jpg" alt="Mountain background" fetchpriority="high">
       </picture>
     </div>
     
@@ -82,8 +88,8 @@
         </div>
         <figure class="image is-128x128 is-inline-block">
           <picture>
-            <source type="image/webp" srcset="img/rons_picture~2.webp">
-            <img class="is-rounded" src="img/rons_picture~2.jpg" alt="Ron's Portrait">
+            <source type="image/webp" srcset="img/rons_picture~2-256.webp">
+            <img class="is-rounded" src="img/rons_picture~2-256.jpg" alt="Ron's Portrait" width="128" height="128">
           </picture>
         </figure>
       </div>
@@ -156,7 +162,7 @@
               <div class="media-right">
                 <figure class="image is-48x48">
                   <source type="image/webp" srcset="img/UCSB.webp">
-                  <img src="img/UCSB.png" alt="University of California, Santa Barbara Logo">
+                  <img loading="lazy" src="img/UCSB.png" alt="University of California, Santa Barbara Logo" width="48" height="48">
                 </figure>
               </div>
             </div>
@@ -185,7 +191,7 @@
               <div class="media-right">
                 <figure class="image is-48x48">
                   <source type="image/webp" srcset="img/cpp_logo.webp">
-                  <img src="img/cpp_logo.png" alt="Cal Poly Pomona logo">
+                  <img loading="lazy" src="img/cpp_logo.png" alt="Cal Poly Pomona logo" width="48" height="48">
                 </figure>
               </div>
             </div>
@@ -248,7 +254,7 @@
               <div class="media-right">
                 <figure class="image is-48x48">
                   <source type="image/webp" srcset="img/nsf_logo.webp">
-                  <img src="img/nsf_logo.png" alt="National Science Foundation logo">
+                  <img loading="lazy" src="img/nsf_logo.png" alt="National Science Foundation logo" width="48" height="48">
                 </figure>
               </div>
             </div>
@@ -320,13 +326,13 @@
               <div class="media-right">
                 <figure class="image is-48x48">
                   <source type="image/webp" srcset="img/adsa.webp">
-                  <img src="img/adsa.png" alt="Academic Data Science Alliance Logo">
+                  <img loading="lazy" src="img/adsa.png" alt="Academic Data Science Alliance Logo" width="48" height="48">
                 </figure>
               </div>
               <div class="media-right">
                 <figure class="image is-48x48">
                   <source type="image/webp" srcset="img/BiDS_SDS.webp">
-                  <img src="img/BiDS_SDS.png" alt="Berkeley Institute of Data Science + Stanford Data Science">
+                  <img loading="lazy" src="img/BiDS_SDS.png" alt="Berkeley Institute of Data Science + Stanford Data Science" width="48" height="48">
                 </figure>
               </div>
             </div>
@@ -391,15 +397,15 @@
                 <div class="icon-container">
                   <figure class="image is-48x48">
                     <source type="image/webp" srcset="img/UCSB.webp">
-                    <img src="img/UCSB.png" alt="University of California, Santa Barbara">
+                    <img loading="lazy" src="img/UCSB.png" alt="University of California, Santa Barbara" width="48" height="48">
                   </figure>
                   <figure class="image is-48x48">
                     <source type="image/webp" srcset="img/DREAM_Lab.webp">
-                    <img src="img/DREAM_Lab.png" alt="UCSB DREAM Lab logo">
+                    <img loading="lazy" src="img/DREAM_Lab.png" alt="UCSB DREAM Lab logo" width="48" height="48">
                   </figure>
                   <figure class="image is-48x48">
                     <source type="image/webp" srcset="img/cnsi-logo.webp">
-                    <img src="img/cnsi-logo.png" alt="CNSI logo">
+                    <img loading="lazy" src="img/cnsi-logo.png" alt="CNSI logo" width="48" height="48">
                   </figure>
                 </div>
               </div>
@@ -439,13 +445,13 @@
                   <div class="media-right">
                     <figure class="image is-48x48">
                       <source type="image/webp" srcset="img/cpp_logo.webp">
-                      <img src="img/cpp_logo.png" alt="Cal Poly Pomona logo">
+                      <img loading="lazy" src="img/cpp_logo.png" alt="Cal Poly Pomona logo" width="48" height="48">
                     </figure>
                   </div>
                   <div class="media-right">
                     <figure class="image is-48x48">
                       <source type="image/webp" srcset="img/nuance_logo.webp">
-                      <img src="img/nuance_logo.png" alt="Nuance Communications logo">
+                      <img loading="lazy" src="img/nuance_logo.png" alt="Nuance Communications logo" width="48" height="48">
                     </figure>
                   </div>
                 </div>
@@ -492,7 +498,7 @@
                   <div class="media-right">
                     <figure class="image is-48x48">
                       <source type="image/webp" srcset="img/nsf_logo.webp">
-                      <img src="img/nsf_logo.png" alt="National Science Foundation logo">
+                      <img loading="lazy" src="img/nsf_logo.png" alt="National Science Foundation logo" width="48" height="48">
                     </figure>
                   </div>
                 </div>

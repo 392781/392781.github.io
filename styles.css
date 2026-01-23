@@ -1,69 +1,40 @@
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.3/css/academicons.min.css");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.0/css/bulma.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css") layer(vendor);
+@import url("https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.3/css/academicons.min.css") layer(vendor);
+@import url("https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.0/css/bulma.min.css") layer(vendor);
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-/* https://www.brailleinstitute.org/freefont/ */
-.atkinson-hyperlegible-regular {
-  font-family: "Atkinson Hyperlegible", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-}
+/* Custom cursors - only on devices with hover (desktops) */
+@media (hover: hover) and (pointer: fine) {
+  * { 
+    cursor: url('img/cabbage.png'), auto !important; 
+  }
 
-.atkinson-hyperlegible-bold {
-  font-family: "Atkinson Hyperlegible", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.atkinson-hyperlegible-regular-italic {
-  font-family: "Atkinson Hyperlegible", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.atkinson-hyperlegible-bold-italic {
-  font-family: "Atkinson Hyperlegible", sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.ubuntu-mono-regular {
-  font-family: "Ubuntu Mono", monospace;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.ubuntu-mono-bold {
-  font-family: "Ubuntu Mono", monospace;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.ubuntu-mono-regular-italic {
-  font-family: "Ubuntu Mono", monospace;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.ubuntu-mono-bold-italic {
-  font-family: "Ubuntu Mono", monospace;
-  font-weight: 700;
-  font-style: italic;
-}
-
-* { 
- cursor: url('img/cabbage.png'), auto !important; 
-}
-
-a, button, [role="button"], input[type="button"], input[type="submit"], .navbar-item, label[for],
-a *, button *, .navbar-item *, label[for] *, .card-footer-item, .card-footer-item * {
-  cursor: url('img/coins.png'), pointer !important;
+  a, button, [role="button"], input[type="button"], input[type="submit"], .navbar-item, label[for],
+  a *, button *, .navbar-item *, label[for] *, .card-footer-item, .card-footer-item * {
+    cursor: url('img/coins.png'), pointer !important;
+  }
 }
 
 html { 
   scroll-behavior: smooth; 
   font-size: 115%;
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  .type {
+    animation: none;
+    max-width: none;
+    border-right: none;
+  }
+  
+  .masonry-item {
+    transition: none;
+  }
 }
 
 html, body, .title, .subtitle, .navbar-item {
@@ -193,6 +164,7 @@ p a:hover { text-decoration: underline; }
   white-space: nowrap;
   overflow: hidden;
   border-right: 1px solid;
+  will-change: max-width;
 }
 
 @keyframes typing {
@@ -250,6 +222,7 @@ p a:hover { text-decoration: underline; }
   width: 100%;
   margin-bottom: 1rem;
   break-inside: avoid;
+  will-change: transform;
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth effect */
 }
 

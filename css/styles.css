@@ -128,7 +128,7 @@ p a:hover {
 
 .navbar {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    margin: 1rem auto 0;
+    margin: 2rem auto 0;
     max-width: calc(100% - 4rem);
     border-radius: 9999px;
     overflow: hidden;
@@ -334,15 +334,11 @@ p a:hover {
 }
 
 @media screen and (max-width: 1023px) {
-    /*.hero {
-        scroll-margin-top: 6.25rem;
-    }*/
-
     .hero .navbar {
         position: fixed;
         top: 0rem;
-        left: 2rem;
-        right: 2rem;
+        left: 1rem;
+        right: 1rem;
         border-radius: 9999px;
         overflow: hidden;
     }

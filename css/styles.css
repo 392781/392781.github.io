@@ -125,13 +125,13 @@ p a:hover {
     padding: 0 2rem;
 }
 
-.navbar {
+/* .navbar {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     margin: 1rem auto 0;
     max-width: calc(100% - 4rem);
     border-radius: 9999px;
     overflow: hidden;
-}
+} */
 
 .navbar-item {
     border-radius: 9999px !important;
@@ -339,8 +339,40 @@ p a:hover {
     .navbar-burger {
         display: none !important;
     }
+
+    /* Make the navbar itself control the width */
+    .navbar {
+        max-width: calc(100% - 2rem) !important;
+        margin-left: 1rem !important;
+        margin-right: 1rem !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* Tight spacing between brand and menu */
+    .navbar-brand {
+        margin-right: 0.5rem !important;
+        padding: 0 !important;
+    }
+
+    .navbar-menu {
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    /* Make navbar-brand and navbar-menu sit next to each other */
+    .navbar-brand {
+        width: auto !important;
+        display: inline-flex !important;
+        justify-content: flex-start !important;
+        padding: 0 !important;
+        margin-right: 0.5rem !important;  /* Add small gap between brand and menu */
+    }
+
+    /* Force navbar-menu to always be visible and inline */
     .navbar-menu {
         display: flex !important;
+        margin-left: auto !important;  /* Push menu to the right */
         position: static !important;
         width: auto !important;
         height: auto !important;
@@ -348,6 +380,7 @@ p a:hover {
         box-shadow: none !important;
         background: transparent !important;
     }
+
     .navbar-end {
         flex-direction: row !important;
         flex-wrap: nowrap !important;
@@ -355,6 +388,28 @@ p a:hover {
         padding: 0 !important;
         clip-path: none !important;
         mask-image: none !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    .navbar-item {
+        display: inline-flex !important;
+        white-space: nowrap !important;
+    }
+
+    /* Ensure the container uses flex to keep everything in one line */
+    .navbar .container {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;  /* Changed from space-between */
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+    }
+
+    /* Disable all hamburger toggle effects */
+    #menu-toggle:checked ~ .navbar-menu {
+        display: flex !important;
+        position: static !important;
     }
 }
 

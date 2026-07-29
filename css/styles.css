@@ -1,9 +1,10 @@
 /* ============================================
    Fonts
    ============================================ */
+
 @font-face {
     font-family: "Atkinson Hyperlegible";
-    src: url("fonts/AtkinsonHyperlegibleNext-Regular.woff2") format("woff2");
+    src: url("../webfonts/AtkinsonHyperlegibleNext-Regular.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -11,8 +12,7 @@
 
 @font-face {
     font-family: "Atkinson Hyperlegible";
-    src: url("fonts/AtkinsonHyperlegibleNext-RegularItalic.woff2")
-        format("woff2");
+    src: url("../webfonts/AtkinsonHyperlegibleNext-RegularItalic.woff2") format("woff2");
     font-weight: 400;
     font-style: italic;
     font-display: swap;
@@ -20,7 +20,7 @@
 
 @font-face {
     font-family: "Atkinson Hyperlegible";
-    src: url("fonts/AtkinsonHyperlegibleNext-Bold.woff2") format("woff2");
+    src: url("../webfonts/AtkinsonHyperlegibleNext-Bold.woff2") format("woff2");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -28,7 +28,7 @@
 
 @font-face {
     font-family: "Atkinson Hyperlegible";
-    src: url("fonts/AtkinsonHyperlegibleNext-BoldItalic.woff2") format("woff2");
+    src: url("../webfonts/AtkinsonHyperlegibleNext-BoldItalic.woff2") format("woff2");
     font-weight: 700;
     font-style: italic;
     font-display: swap;
@@ -36,7 +36,7 @@
 
 @font-face {
     font-family: "Atkinson Mono";
-    src: url("fonts/AtkinsonHyperlegibleMono-Regular.woff2") format("woff2");
+    src: url("../webfonts/AtkinsonHyperlegibleMono-Regular.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -44,8 +44,7 @@
 
 @font-face {
     font-family: "Atkinson Mono";
-    src: url("fonts/AtkinsonHyperlegibleMono-RegularItalic.woff2")
-        format("woff2");
+    src: url("../webfonts/AtkinsonHyperlegibleMono-RegularItalic.woff2") format("woff2");
     font-weight: 400;
     font-style: italic;
     font-display: swap;
@@ -53,7 +52,7 @@
 
 @font-face {
     font-family: "Atkinson Mono";
-    src: url("fonts/AtkinsonHyperlegibleMono-Bold.woff2") format("woff2");
+    src: url("../webfonts/AtkinsonHyperlegibleMono-Bold.woff2") format("woff2");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -61,7 +60,7 @@
 
 @font-face {
     font-family: "Atkinson Mono";
-    src: url("fonts/AtkinsonHyperlegibleMono-BoldItalic.woff2") format("woff2");
+    src: url("../webfonts/AtkinsonHyperlegibleMono-BoldItalic.woff2") format("woff2");
     font-weight: 700;
     font-style: italic;
     font-display: swap;
@@ -117,21 +116,14 @@ p a:hover {
     position: relative;
 }
 
-.hero .navbar {
+.navbar .container {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    /* padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important; */
+    overflow: hidden;
     backdrop-filter: blur(10px);
     background: rgba(0, 0, 0, 0.25);
-}
-
-.hero-head {
-    padding: 0 2rem;
-}
-
-.navbar {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    margin: 1rem auto 0;
-    max-width: calc(100% - 4rem);
-    border-radius: 9999px;
-    overflow: hidden;
+    border-radius: 9999px; /* Match the navbar's border-radius */
 }
 
 .navbar-item {
@@ -145,11 +137,14 @@ p a:hover {
 
 .navbar-menu {
     border-radius: 9999px !important;
+    padding-right: 0.5rem;
+    margin-inline-end: 0 !important;
 }
 
 .navbar-brand {
     border-radius: 9999px !important;
     padding: 0 8px;
+    margin-inline-start: 0 !important;
 }
 
 /* ============================================
@@ -177,7 +172,7 @@ p a:hover {
    ============================================ */
 @media (hover: hover) and (pointer: fine) {
     * {
-        cursor: url("img/cabbage.png"), auto !important;
+        cursor: url("../img/cabbage.png"), auto !important;
     }
     a,
     button,
@@ -192,7 +187,7 @@ p a:hover {
     label[for] *,
     .card-footer-item,
     .card-footer-item * {
-        cursor: url("img/coins.png"), pointer !important;
+        cursor: url("../img/coins.png"), pointer !important;
     }
 }
 
@@ -326,15 +321,96 @@ p a:hover {
    Mobile Navbar
    ============================================ */
 .navbar {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     margin: 1rem auto 0;
-    max-width: calc(100% - 2rem);
     border-radius: 9999px;
     overflow: hidden;
 }
 
-@media screen and (max-width: 1023px) {
+/* ============================================
+   Tablet and Desktop (≥769px)
+   ============================================ */
+@media screen and (min-width: 769px) {
+    .navbar-burger {
+        display: none !important;
+    }
+
+    /* Make the navbar itself control the width */
+    .navbar {
+        max-width: calc(100% - 2rem) !important;
+        margin-left: 1rem !important;
+        margin-right: 1rem !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding-bottom: 1rem;
+    }
+
+    /* Tight spacing between brand and menu */
+    .navbar-brand {
+        margin-right: 0.5rem !important;
+        padding: 0 !important;
+    }
+
+    .navbar-menu {
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    /* Make navbar-brand and navbar-menu sit next to each other */
+    .navbar-brand {
+        width: auto !important;
+        display: inline-flex !important;
+        justify-content: flex-start !important;
+        padding: 0 !important;
+        margin-right: 0.5rem !important;  /* Add small gap between brand and menu */
+    }
+
+    /* Force navbar-menu to always be visible and inline */
+    .navbar-menu {
+        display: flex !important;
+        margin-left: auto !important;  /* Push menu to the right */
+        position: static !important;
+        width: auto !important;
+        height: auto !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        background: transparent !important;
+    }
+
+    .navbar-end {
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow: visible !important;
+        padding: 0 !important;
+        clip-path: none !important;
+        mask-image: none !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    .navbar-item {
+        display: inline-flex !important;
+        white-space: nowrap !important;
+    }
+
+    /* Ensure the container uses flex to keep everything in one line */
+    .navbar .container {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;  /* Changed from space-between */
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+    }
+
+    /* Disable all hamburger toggle effects */
+    #menu-toggle:checked ~ .navbar-menu {
+        display: flex !important;
+        position: static !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
     .hero .navbar {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         position: fixed;
         top: 0rem;
         left: 1rem;
@@ -479,7 +555,7 @@ p a:hover {
     }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 769px) {
     .navbar .container {
         padding-left: 0.5rem;
         padding-right: 0.5rem;
@@ -491,5 +567,33 @@ p a:hover {
 
     .navbar-end {
         padding-right: 0.5rem;
+    }
+}
+
+@media screen and (min-width: 769px) {
+  section[id] {
+    scroll-margin-top: 3.25rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar.is-fixed-top {
+    position: fixed;
+    bottom: 1rem;
+    top: auto;
+  }
+
+  section[id] {
+    scroll-margin-top: 0;
+  }
+}
+
+/* For mobile only (768px and down) */
+@media screen and (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+    }
+    .navbar-menu.is-active {
+        display: block;
     }
 }

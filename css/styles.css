@@ -356,7 +356,7 @@ p a:hover {
     overflow: hidden;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 768px) {
     .hero .navbar {
         position: fixed;
         top: 0rem;
@@ -499,6 +499,72 @@ p a:hover {
 
     .navbar-burger span {
         background-color: white;
+    }
+}
+
+/* ============================================
+   Tablet Navbar (769px - 1023px)
+   ============================================ */
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+    .hero .navbar {
+        position: fixed;
+        top: 0rem;
+        left: 1rem;
+        right: 1rem;
+        border-radius: 9999px;
+        overflow: hidden;
+    }
+
+    .visual-layer {
+        display: none;
+    }
+
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-menu {
+        display: block;
+    }
+
+    .navbar-menu::after {
+        display: none;
+    }
+
+    .navbar-menu .navbar-end {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+        padding: 0 1rem;
+        text-align: left;
+    }
+
+    .navbar-menu .navbar-end::-webkit-scrollbar {
+        height: 3px;
+    }
+
+    .navbar-menu .navbar-end::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .navbar-menu .navbar-end::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 9999px;
+    }
+
+    .navbar-menu .navbar-end::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.5);
+    }
+
+    .navbar-burger {
+        display: none !important;
     }
 }
 

@@ -116,22 +116,15 @@ p a:hover {
     position: relative;
 }
 
-.hero .navbar {
+.navbar .container {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    /* padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important; */
+    overflow: hidden;
     backdrop-filter: blur(10px);
     background: rgba(0, 0, 0, 0.25);
+    border-radius: 9999px; /* Match the navbar's border-radius */
 }
-
-.hero-head {
-    padding: 0 2rem;
-}
-
-/* .navbar {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    margin: 1rem auto 0;
-    max-width: calc(100% - 4rem);
-    border-radius: 9999px;
-    overflow: hidden;
-} */
 
 .navbar-item {
     border-radius: 9999px !important;
@@ -144,11 +137,14 @@ p a:hover {
 
 .navbar-menu {
     border-radius: 9999px !important;
+    padding-right: 0.5rem;
+    margin-inline-end: 0 !important;
 }
 
 .navbar-brand {
     border-radius: 9999px !important;
     padding: 0 8px;
+    margin-inline-start: 0 !important;
 }
 
 /* ============================================
@@ -325,7 +321,6 @@ p a:hover {
    Mobile Navbar
    ============================================ */
 .navbar {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     margin: 1rem auto 0;
     max-width: calc(100% - 2rem);
     border-radius: 9999px;
@@ -415,6 +410,7 @@ p a:hover {
 
 @media screen and (max-width: 768px) {
     .hero .navbar {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         position: fixed;
         top: 0rem;
         left: 1rem;
@@ -559,7 +555,7 @@ p a:hover {
     }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 769px) {
     .navbar .container {
         padding-left: 0.5rem;
         padding-right: 0.5rem;

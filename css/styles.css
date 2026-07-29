@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: "Atkinson Hyperlegible";
-    src: url("webfonts/AtkinsonHyperlegibleNext-Regular.woff2") format("woff2");
+    src: url("../webfonts/AtkinsonHyperlegibleNext-Regular.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -12,7 +12,7 @@
 
 @font-face {
     font-family: "Atkinson Hyperlegible";
-    src: url("webfonts/AtkinsonHyperlegibleNext-RegularItalic.woff2") format("woff2");
+    src: url("../webfonts/AtkinsonHyperlegibleNext-RegularItalic.woff2") format("woff2");
     font-weight: 400;
     font-style: italic;
     font-display: swap;
@@ -20,7 +20,7 @@
 
 @font-face {
     font-family: "Atkinson Hyperlegible";
-    src: url("webfonts/AtkinsonHyperlegibleNext-Bold.woff2") format("woff2");
+    src: url("../webfonts/AtkinsonHyperlegibleNext-Bold.woff2") format("woff2");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -28,7 +28,7 @@
 
 @font-face {
     font-family: "Atkinson Hyperlegible";
-    src: url("webfonts/AtkinsonHyperlegibleNext-BoldItalic.woff2") format("woff2");
+    src: url("../webfonts/AtkinsonHyperlegibleNext-BoldItalic.woff2") format("woff2");
     font-weight: 700;
     font-style: italic;
     font-display: swap;
@@ -36,7 +36,7 @@
 
 @font-face {
     font-family: "Atkinson Mono";
-    src: url("webfonts/AtkinsonHyperlegibleMono-Regular.woff2") format("woff2");
+    src: url("../webfonts/AtkinsonHyperlegibleMono-Regular.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -44,7 +44,7 @@
 
 @font-face {
     font-family: "Atkinson Mono";
-    src: url("webfonts/AtkinsonHyperlegibleMono-RegularItalic.woff2") format("woff2");
+    src: url("../webfonts/AtkinsonHyperlegibleMono-RegularItalic.woff2") format("woff2");
     font-weight: 400;
     font-style: italic;
     font-display: swap;
@@ -52,7 +52,7 @@
 
 @font-face {
     font-family: "Atkinson Mono";
-    src: url("webfonts/AtkinsonHyperlegibleMono-Bold.woff2") format("woff2");
+    src: url("../webfonts/AtkinsonHyperlegibleMono-Bold.woff2") format("woff2");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -60,7 +60,7 @@
 
 @font-face {
     font-family: "Atkinson Mono";
-    src: url("webfonts/AtkinsonHyperlegibleMono-BoldItalic.woff2") format("woff2");
+    src: url("../webfonts/AtkinsonHyperlegibleMono-BoldItalic.woff2") format("woff2");
     font-weight: 700;
     font-style: italic;
     font-display: swap;
@@ -172,7 +172,7 @@ p a:hover {
    ============================================ */
 @media (hover: hover) and (pointer: fine) {
     * {
-        cursor: url("img/cabbage.png"), auto !important;
+        cursor: url("../img/cabbage.png"), auto !important;
     }
     a,
     button,
@@ -187,7 +187,7 @@ p a:hover {
     label[for] *,
     .card-footer-item,
     .card-footer-item * {
-        cursor: url("img/coins.png"), pointer !important;
+        cursor: url("../img/coins.png"), pointer !important;
     }
 }
 
@@ -322,7 +322,6 @@ p a:hover {
    ============================================ */
 .navbar {
     margin: 1rem auto 0;
-    max-width: calc(100% - 2rem);
     border-radius: 9999px;
     overflow: hidden;
 }
@@ -342,6 +341,7 @@ p a:hover {
         margin-right: 1rem !important;
         padding-left: 0 !important;
         padding-right: 0 !important;
+        padding-bottom: 1rem;
     }
 
     /* Tight spacing between brand and menu */

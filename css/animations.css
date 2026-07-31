@@ -1,0 +1,285 @@
+/* SVG Animations - Extracted from FontAwesome all.min.css */
+/* These animations have been rewritten to work with SVG elements */
+
+/* Apply animations to SVG elements using classes like: */
+/* <svg class="svg-animate svg-beat">...</svg> */
+
+/* Base class for animated SVGs */
+.svg-animate {
+  display: inline-block;
+  will-change: transform;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .svg-animate,
+  .svg-beat,
+  .svg-bounce,
+  .svg-fade,
+  .svg-beat-fade,
+  .svg-flip,
+  .svg-flip-360,
+  .svg-shake,
+  .svg-spin,
+  .svg-spin-pulse,
+  .svg-spin-snap,
+  .svg-spin-snap-4,
+  .svg-spin-snap-8,
+  .svg-buzz,
+  .svg-wag,
+  .svg-float,
+  .svg-swing,
+  .svg-jello {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@keyframes fa-beat {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.5625); }
+  45% { transform: scale(1.4884); }
+  65% { transform: scale(1.5625); }
+  90% { transform: scale(1); }
+}
+
+@keyframes fa-bounce {
+  0% { transform: scale(1) translateY(0); animation-timing-function: ease-in-out; }
+  14% { transform: scale(1.06, 0.94) translateY(3px); animation-timing-function: cubic-bezier(0.33, 0, 0.66, 0.33); }
+  32% { transform: scale(0.94, 1.12) translateY(-0.5em); animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1); }
+  52% { transform: scale(1) translateY(-0.55em); animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5); }
+  70% { transform: scale(1.06, 0.92) translateY(0); animation-timing-function: cubic-bezier(0.33, 0.33, 0.66, 1); }
+  85% { transform: scale(0.98, 1.04) translateY(-2px); animation-timing-function: cubic-bezier(0.33, 0, 0.66, 1); }
+  to { transform: scale(1) translateY(0); }
+}
+
+@keyframes fa-fade {
+  0% { opacity: 1; transform: scale(1); animation-timing-function: cubic-bezier(0.2, 0, 0.4, 1); }
+  40% { opacity: 0.4; transform: scale(0.98); animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fa-beat-fade {
+  0% { opacity: 0.4; transform: scale(1); animation-timing-function: cubic-bezier(0.2, 0, 0.4, 1); }
+  25% { opacity: 0.8; transform: scale(1.28); animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  45% { opacity: 1; transform: scale(1.25); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  65% { opacity: 0.8; transform: scale(1.28); animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  to { opacity: 0.4; transform: scale(1); }
+}
+
+@keyframes fa-flip {
+  0% { transform: perspective(2em) scale(1) rotate3d(0, 1, 0, 0deg); animation-timing-function: cubic-bezier(0.2, 0, 0.4, 1); }
+  8% { transform: perspective(2em) scale(0.95) rotate3d(0, 1, 0, 0deg); animation-timing-function: cubic-bezier(0.33, 0, 0.66, 0.33); }
+  35% { transform: perspective(2em) scale(1) rotate3d(0, 1, 0, -216deg); animation-timing-function: linear; }
+  65% { transform: perspective(2em) scale(1) rotate3d(0, 1, 0, -180deg); animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1); }
+  92% { transform: perspective(2em) scale(1) rotate3d(0, 1, 0, -374.4deg); animation-timing-function: cubic-bezier(0.33, 0, 0.66, 1); }
+  to { transform: perspective(2em) scale(1) rotate3d(0, 1, 0, -360deg); }
+}
+
+@keyframes fa-flip-360 {
+  0% { transform: perspective(2em) scale(1) rotate3d(0, 1, 0, 0deg); animation-timing-function: cubic-bezier(0.2, 0, 0.4, 1); }
+  8% { transform: perspective(2em) scale(0.95) rotate3d(0, 1, 0, 0deg); animation-timing-function: cubic-bezier(0.33, 0, 0.66, 0.33); }
+  50% { transform: perspective(2em) scale(1) rotate3d(0, 1, 0, -216deg); animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1); }
+  80% { transform: perspective(2em) scale(1) rotate3d(0, 1, 0, -374.4deg); animation-timing-function: cubic-bezier(0.33, 0, 0.66, 1); }
+  to { transform: perspective(2em) scale(1) rotate3d(0, 1, 0, -360deg); }
+}
+
+@keyframes fa-shake {
+  0% { transform: rotate(0deg); animation-timing-function: cubic-bezier(0.2, 0, 0.8, 1); }
+  8% { transform: rotate(35deg) translateX(1px); animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1); }
+  20% { transform: rotate(-22deg) translateX(-1px); animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1); }
+  35% { transform: rotate(15deg) translateX(1px); animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1); }
+  50% { transform: rotate(-9deg); animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  65% { transform: rotate(5deg); animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  78% { transform: rotate(-3deg); animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  90% { transform: rotate(1deg); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes fa-spin {
+  0% { transform: rotate(0deg); }
+  to { transform: rotate(1turn); }
+}
+
+@keyframes fa-spin-snap {
+  0% { transform: rotate(0deg); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  12% { transform: rotate(60deg); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  16.67% { transform: rotate(60deg); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  28.67% { transform: rotate(120deg); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  33.33% { transform: rotate(120deg); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  45.33% { transform: rotate(180deg); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  50% { transform: rotate(180deg); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  62% { transform: rotate(240deg); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  66.67% { transform: rotate(240deg); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  78.67% { transform: rotate(300deg); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  83.33% { transform: rotate(300deg); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  95.33% { transform: rotate(1turn); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  to { transform: rotate(1turn); }
+}
+
+@keyframes fa-spin-snap-4 {
+  0% { transform: rotate(0deg); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  15% { transform: rotate(90deg); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  25% { transform: rotate(90deg); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  40% { transform: rotate(180deg); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  50% { transform: rotate(180deg); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  65% { transform: rotate(270deg); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  75% { transform: rotate(270deg); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  90% { transform: rotate(1turn); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  to { transform: rotate(1turn); }
+}
+
+@keyframes fa-spin-snap-8 {
+  0% { transform: rotate(0deg); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  9% { transform: rotate(45deg); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  12.5% { transform: rotate(45deg); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  21.5% { transform: rotate(90deg); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  25% { transform: rotate(90deg); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  34% { transform: rotate(135deg); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  37.5% { transform: rotate(135deg); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  46.5% { transform: rotate(180deg); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  50% { transform: rotate(180deg); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  59% { transform: rotate(225deg); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  62.5% { transform: rotate(225deg); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  71.5% { transform: rotate(270deg); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  75% { transform: rotate(270deg); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  84% { transform: rotate(315deg); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  87.5% { transform: rotate(315deg); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  96.5% { transform: rotate(1turn); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  to { transform: rotate(1turn); }
+}
+
+@keyframes fa-buzz {
+  0% { transform: translateX(0) rotate(0deg); animation-timing-function: cubic-bezier(0.1, 0, 0.9, 1); }
+  5% { transform: translateX(4px) rotate(0.5deg); }
+  10% { transform: translateX(-4px) rotate(-0.5deg); }
+  15% { transform: translateX(4px) rotate(0.3deg); }
+  20% { transform: translateX(-4px) rotate(-0.3deg); }
+  25% { transform: translateX(2.8px) rotate(0.2deg); }
+  30% { transform: translateX(-2.8px) rotate(-0.2deg); }
+  35% { transform: translateX(1.6px) rotate(0.1deg); }
+  40% { transform: translateX(0) rotate(0deg); }
+  to { transform: translateX(0) rotate(0deg); }
+}
+
+@keyframes fa-wag {
+  0% { transform: rotate(0deg); animation-timing-function: cubic-bezier(0.2, 0, 0.6, 1); }
+  12% { transform: rotate(12deg); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  24% { transform: rotate(2deg); animation-timing-function: cubic-bezier(0.2, 0, 0.6, 1); }
+  36% { transform: rotate(10.2deg); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  48% { transform: rotate(1deg); animation-timing-function: cubic-bezier(0.2, 0, 0.6, 1); }
+  58% { transform: rotate(7.2deg); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  68% { transform: rotate(0deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes fa-float {
+  0% { transform: translateY(0) translateX(0) rotate(0deg) scale(1.02, 0.98); animation-timing-function: cubic-bezier(0.33, 0, 0.66, 0.33); }
+  15% { transform: translateY(-2.4px) translateX(1px) rotate(1deg) scale(1); animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1); }
+  35% { transform: translateY(-6px) translateX(0) rotate(0deg) scale(0.98, 1.03); animation-timing-function: cubic-bezier(0.5, 0, 0.5, 0); }
+  50% { transform: translateY(-5.52px) translateX(-0.5px) rotate(-0.5deg) scale(0.995, 1.01); animation-timing-function: cubic-bezier(0.33, 0, 0.66, 0.33); }
+  70% { transform: translateY(-1.8px) translateX(-1px) rotate(-1deg) scale(1); animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1); }
+  90% { transform: translateY(0.3px) translateX(0) rotate(0deg) scale(1.02, 0.98); animation-timing-function: cubic-bezier(0.33, 0, 0.66, 1); }
+  to { transform: translateY(0) translateX(0) rotate(0deg) scale(1.02, 0.98); }
+}
+
+@keyframes fa-swing {
+  0% { transform: rotate(0deg); animation-timing-function: cubic-bezier(0.2, 0, 0.8, 1); }
+  8% { transform: rotate(22deg); animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1); }
+  18% { transform: rotate(-18.7deg); animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1); }
+  28% { transform: rotate(14.3deg); animation-timing-function: cubic-bezier(0.35, 0, 0.65, 1); }
+  38% { transform: rotate(-9.9deg); animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  48% { transform: rotate(5.5deg); animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  56% { transform: rotate(-2.2deg); animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  64% { transform: rotate(0deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes fa-jello {
+  0% { transform: scale(1); animation-timing-function: cubic-bezier(0.2, 0, 0.8, 1); }
+  12% { transform: scale(1.15, 0.85); animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1); }
+  24% { transform: scale(0.88, 1.12); animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1); }
+  36% { transform: scale(0.825, 1.075); animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  48% { transform: scale(1.01, 0.97); animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  58% { transform: scale(1.02, 0.98); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  68% { transform: scale(1); }
+  to { transform: scale(1); }
+}
+
+
+/* Animation classes for SVG elements */
+
+.svg-beat {
+  animation: fa-beat 1s ease-in-out infinite;
+}
+
+.svg-bounce {
+  animation: fa-bounce 1s cubic-bezier(0.28, 0.84, 0.42, 1) infinite;
+}
+
+.svg-fade {
+  animation: fa-fade 1s ease-in-out infinite;
+}
+
+.svg-beat-fade {
+  animation: fa-beat-fade 1s ease-in-out infinite;
+}
+
+.svg-flip {
+  animation: fa-flip 1.5s ease-in-out infinite;
+}
+
+.svg-flip-360 {
+  animation: fa-flip-360 1s ease-in-out infinite;
+}
+
+.svg-shake {
+  animation: fa-shake 0.75s ease-in-out infinite;
+}
+
+.svg-spin {
+  animation: fa-spin 2s linear infinite;
+}
+
+.svg-spin-reverse {
+  animation: fa-spin 2s linear infinite reverse;
+}
+
+.svg-pulse, .svg-spin-pulse {
+  animation: fa-spin 1s steps(8) infinite;
+}
+
+.svg-spin-snap {
+  animation: fa-spin-snap 3s linear infinite;
+}
+
+.svg-spin-snap-4 {
+  animation: fa-spin-snap-4 2.4s linear infinite;
+}
+
+.svg-spin-snap-8 {
+  animation: fa-spin-snap-8 4s linear infinite;
+}
+
+.svg-buzz {
+  animation: fa-buzz 0.6s linear infinite;
+}
+
+.svg-wag {
+  animation: fa-wag 0.9s ease-out infinite;
+  transform-origin: bottom center;
+}
+
+.svg-float {
+  animation: fa-float 3s ease-in-out infinite;
+  will-change: transform;
+}
+
+.svg-swing {
+  animation: fa-swing 1.2s ease-out infinite;
+  transform-origin: top center;
+}
+
+.svg-jello {
+  animation: fa-jello 0.9s ease-out infinite;
+}

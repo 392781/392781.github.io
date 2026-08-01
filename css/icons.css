@@ -19,11 +19,46 @@
   font-size: inherit;
 }
 
-/* Add size modifiers like FontAwesome */
-.icon-2x { font-size: 2em; }
-.icon-3x { font-size: 3em; }
-.icon-lg { font-size: 1.25em; }
-.icon-sm { font-size: 0.875em; }
+/* Add size modifiers - these now directly set width/height */
+.icon-2x { width: 2.5em; height: 2.5em; }
+.icon-3x { width: 3.75em; height: 3.75em; }
+.icon-lg { width: 1.5em; height: 1.5em; }
+.icon-sm { width: 1em; height: 1em; }
+.icon-xs { width: 0.75em; height: 0.75em; }
+
+/* Bulma icon size compatibility */
+.icon.is-small .svgcons {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.icon.is-medium .svgcons {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.icon.is-large .svgcons {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* For icons used within Bulma's icon-text */
+.icon-text .svgcons {
+  vertical-align: middle;
+}
+
+/* For navbar icons */
+.navbar-item .svgcons {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-item .svgcons {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+}
 
 .icon-graduation-cap-fill {
   mask-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22black%22%3E%3Cpath%20d%3D%22M12%202%200%209%2012%2016%2022%2010.1667V17.5H24V9L12%202ZM3.99902%2013.4905V18.0001C5.82344%2020.429%208.72812%2022.0001%2011.9998%2022.0001%2015.2714%2022.0001%2018.1761%2020.429%2020.0005%2018.0001L20.0001%2013.4913%2012.0003%2018.1579%203.99902%2013.4905Z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E');

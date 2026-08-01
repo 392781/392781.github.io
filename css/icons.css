@@ -9,11 +9,13 @@
   display: inline-block;
   width: 1.25em;
   height: 1.25em;
-  color: inherit; /* Inherit color from parent element */
-  background-color: currentColor; /* Use current color for fill */
-  mask-size: contain;
-  mask-repeat: no-repeat;
-  mask-position: center;
+  background-color: currentColor;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
   line-height: 1;
   vertical-align: middle;
   font-size: inherit;
@@ -188,3 +190,37 @@
   mask-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22black%22%3E%3Cpath%20d%3D%22M19.5%204.7832V7.6709L22%209.11426V14.8867L19.499%2016.3311L19.5%2019.2178L14.5%2022.1045L12%2020.6611L9.5%2022.1045L4.5%2019.2178V16.3311L2%2014.8877L2.00098%209.11328L4.5%207.66992V4.78418L9.5%201.89746L11.999%203.34082L14.501%201.89648L19.5%204.7832ZM13%205.07227L12.999%208.42285L15.9639%2010.1338L14.9639%2011.8662L11%209.57715V5.07324L9.5%204.20703L6.49902%205.93848V8.8252L4%2010.2676V13.7334L6.5%2015.1768V18.0635L9.5%2019.7959L11%2018.9287L11.001%2015.5771L8.03613%2013.8652L9.03613%2012.1338L13.001%2014.4229V18.9297L14.5%2019.7959L17.5%2018.0625V15.1768L20%2013.7324V10.2695L17.499%208.8252L17.5%205.9375L14.501%204.20605L13%205.07227Z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E');
 }
 
+
+/* Bulma icon size compatibility */
+.icon.is-small .svgcons {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.icon.is-medium .svgcons {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.icon.is-large .svgcons {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* For icons used within Bulma's icon-text */
+.icon-text .svgcons {
+  vertical-align: middle;
+}
+
+/* For navbar icons */
+.navbar-item .svgcons {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-item .svgcons {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+}

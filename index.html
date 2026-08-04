@@ -16,7 +16,8 @@
   <meta name="color-scheme" content="light dark">
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel="stylesheet" href="css/bulma.min.css">
-  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/icons.css">
+  <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/styles.css"/>
   <link rel="preload" as="image" href="img/background~2-mobile.webp" type="image/webp" media="(max-width: 768px)">
   <link rel="preload" as="image" href="img/background~2.webp" type="image/webp" media="(min-width: 769px)">
@@ -43,17 +44,24 @@
           <input type="checkbox" id="menu-toggle" name="menu-toggle" class="is-hidden">
           <div class="navbar-brand">
             <a class="navbar-item" href="https://github.com/392781/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-              <span class="icon is-medium"><i class="fa-brands fa-github fa-2x"></i></span>
+              <svg class="svgcon svg-2x" viewBox="0 0 24 24" aria-hidden="true">
+                <use href="css/icons/github-line.svg"/>
+              </svg>
             </a>
             <a class="navbar-item" href="https://scholar.google.com/citations?hl=en&user=mGdZrSAAAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
-              <span class="icon is-medium"><i class="fa-solid fa-scroll fa-2x"></i></span>
-              <!-- <span class="icon is-medium"><i class="ai ai-google-scholar-square ai-stack-2x"></i></span> -->
+                <svg class="svgcon svg-2x" viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="css/icons/quill-pen-line.svg"/>
+                </svg>
             </a>
             <a class="navbar-item" href="mailto:contact@ronaldas.dev" target="_blank" rel="noopener noreferrer" aria-label="Email Address">
-              <span class="icon is-medium"><i class="fa-solid fa-envelopes-bulk fa-2x"></i></span>
+              <svg class="svgcon svg-2x" viewBox="0 0 24 24" aria-hidden="true">
+                <use href="css/icons/mail-send-line.svg"/>
+              </svg>
             </a>
             <a class="navbar-item" href="https://ko-fi.com/guthix_rest" target="_blank" rel="noopener noreferrer" aria-label="Ko-Fi">
-              <span class="icon is-medium"><i class="fa-brands fa-ko-fi fa-wag fa-2x" style="--fa-animation-duration: 2s;"></i></span>
+              <svg class="svgcon svg-2x svg-animate svg-wag" viewBox="0 0 24 24" aria-hidden="true">
+                <use href="css/icons/ko-fi.svg"/>
+              </svg>
             </a>
             <label for="menu-toggle" class="navbar-burger burger">
               <span aria-hidden="true"></span>
@@ -103,12 +111,12 @@
     <div class="hero-body">
       <div class="container is-max-fullhd">
         <h2 class="title">
-          <span class="icon-text">
-            <span class="icon" style="margin-right: 0.25em;">
-              <i class="fa-solid fa-meteor"></i>
-            </span>
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <svg class="svgcon" viewBox="0 0 24 24" aria-hidden="true">
+              <use href="css/icons/meteor-fill.svg"/>
+            </svg>
             <span>About Me</span>
-          </span>
+          </div>
         </h2>
       </div>
     </div>
@@ -138,12 +146,12 @@
     <div class="hero-body">
       <div class="container is-max-fullhd">
         <h2 class="title">
-          <span class="icon-text">
-            <span class="icon" style="margin-right: 0.25em;">
-              <i class="fa-solid fa-circle-nodes"></i>
-            </span>
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <svg class="svgcon" viewBox="0 0 24 24" aria-hidden="true">
+              <use href="css/icons/sine-wave.svg"/>
+            </svg>
             <span>Research</span>
-          </span>
+          </div>
         </h2>
       </div>
     </div>
@@ -211,34 +219,42 @@
           <footer class="card-footer">
             <a class="card-footer-item" href="http://hdl.handle.net/20.500.12680/d504rr81v" target="_blank" rel="noopener noreferrer">
               <span class="icon-text is-size-6-desktop is-size-7-touch has-text-weight-semibold has-text-info is-justify-content-center">
-                <span class="icon">
-                  <i class="fa-solid fa-link"></i>
-                </span>
-                <span class="has-text-info">Link</span>
+                <div style="display: flex; align-items: center; gap: 0.25rem;">
+                  <svg class="svgcon" viewBox="0 0 24 24" aria-hidden="true">
+                    <use href="css/icons/link-m.svg"/>
+                  </svg>
+                  <span>Link</span>
+                </div>
               </span>
             </a>
             <a class="card-footer-item" href="https://arxiv.org/pdf/2208.03761" target="_blank" rel="noopener noreferrer">
               <span class="icon-text is-size-6-desktop is-size-7-touch has-text-weight-semibold has-text-danger is-justify-content-center">
-                <span class="icon">
-                  <i class="fa-regular fa-file-pdf"></i>
-                </span>
-                <span>File</span>
+                <div style="display: flex; align-items: center; gap: 0.25rem;">
+                  <svg class="svgcon" viewBox="0 0 24 24" aria-hidden="true">
+                    <use href="css/icons/file-pdf-2-line.svg"/>
+                  </svg>
+                  <span>File</span>
+                </div>
               </span>
             </a>
             <a class="card-footer-item" href="https://github.com/392781/neural-laplace" target="_blank" rel="noopener noreferrer">
               <span class="icon-text is-size-6-desktop is-size-7-touch has-text-weight-semibold has-text-success is-justify-content-center">
-                <span class="icon">
-                  <i class="fa-solid fa-code"></i>
-                </span>
-                <span>Code</span>
+                <div style="display: flex; align-items: center; gap: 0.25rem;">
+                  <svg class="svgcon" viewBox="0 0 24 24" aria-hidden="true">
+                    <use href="css/icons/code-s-slash-line.svg"/>
+                  </svg>
+                  <span>Code</span>
+                </div>
               </span>
             </a>
             <a class="card-footer-item" href="https://github.com/392781/scikit-ntk" target="_blank" rel="noopener noreferrer">
               <span class="icon-text is-size-6-desktop is-size-7-touch has-text-weight-semibold has-text-warning-50 is-justify-content-center">
-                <span class="icon">
-                  <i class="fa-brands fa-python"></i>
-                </span>
-                <span>Package</span>
+                <div style="display: flex; align-items: center; gap: 0.25rem;">
+                  <svg class="svgcon" viewBox="-1 -1 27 27" aria-hidden="true">
+                    <use href="css/icons/python.svg"/>
+                  </svg>
+                  <span>Package</span>
+                </div>
               </span>
             </a>
           </footer>
@@ -274,18 +290,22 @@
           <footer class="card-footer">
             <a class="card-footer-item" href="https://github.com/392781/FaceOff/raw/master/rlencevicius_poster.pdf" target="_blank" rel="noopener noreferrer">
               <span class="icon-text is-size-6-desktop is-size-7-touch has-text-weight-semibold has-text-danger is-justify-content-center">
-                <span class="icon">
-                  <i class="fa-regular fa-file-pdf"></i>
-                </span>
-                <span>File</span>
+                <div style="display: flex; align-items: center; gap: 0.25rem;">
+                  <svg class="svgcon" viewBox="0 0 24 24" aria-hidden="true">
+                    <use href="css/icons/file-pdf-2-line.svg"/>
+                  </svg>
+                  <span>Poster</span>
+                </div>
               </span>
             </a>
             <a class="card-footer-item" href="https://github.com/392781/FaceOff" target="_blank" rel="noopener noreferrer">
               <span class="icon-text is-size-6-desktop is-size-7-touch has-text-weight-semibold has-text-success is-justify-content-center">
-                <span class="icon">
-                  <i class="fa-solid fa-code"></i>
-                </span>
-                <span>Code</span>
+                <div style="display: flex; align-items: center; gap: 0.25rem;">
+                  <svg class="svgcon" viewBox="0 0 24 24" aria-hidden="true">
+                    <use href="css/icons/code-s-slash-line.svg"/>
+                  </svg>
+                  <span>Code</span>
+                </div>
               </span>
             </a>
           </footer>
@@ -301,12 +321,12 @@
     <div class="hero-body">
       <div class="container is-max-fullhd">
         <h2 class="title">
-          <span class="icon-text">
-            <span class="icon" style="margin-right: 0.25em;">
-              <i class="fa-solid fa-wand-magic-sparkles"></i>
-            </span>
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <svg class="svgcon" viewBox="0 0 24 24" aria-hidden="true">
+              <use href="css/icons/presentation-line.svg"/>
+            </svg>
             <span>Presentations</span>
-          </span>
+          </div>
         </h2>
       </div>
     </div>
@@ -362,26 +382,32 @@
             <a class="card-footer-item" href="/files/RPLencevicius_Containers_ADSA.pdf" target="_blank" rel="noopener noreferrer">
               <span class="icon-text is-size-6-desktop is-size-7-touch has-text-weight-semibold has-text-danger is-justify-content-center">
                 <span class="icon-text has-text-danger is-justify-content-center">
-                  <span class="icon">
-                    <i class="fa-regular fa-file-pdf"></i>
-                  </span>
-                  <span class="has-text-danger">Slides</span>
+                  <div style="display: flex; align-items: center; gap: 0.25rem;">
+                    <svg class="svgcon" viewBox="0 0 24 24" aria-hidden="true">
+                      <use href="css/icons/slideshow-line.svg"/>
+                    </svg>
+                    <span>Slides</span>
+                  </div>
                 </span>
               </a>
               <a class="card-footer-item" href="https://youtu.be/dIX9EOq0r1c?" target="_blank" rel="noopener noreferrer">
                 <span class="icon-text is-size-6-desktop is-size-7-touch has-text-weight-semibold has-text-danger is-justify-content-center">
-                  <span class="icon">
-                    <i class="fa-brands fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
+                  <div style="display: flex; align-items: center; gap: 0.25rem;">
+                    <svg class="svgcon" viewBox="0 0 24 24" aria-hidden="true">
+                      <use href="css/icons/youtube-line.svg"/>
+                    </svg>
+                    <span>Video</span>
+                  </div>
                 </span>
               </a>
               <a class="card-footer-item" href="https://github.com/UCSB-PSTAT/devcontainer-template" target="_blank" rel="noopener noreferrer">
                 <span class="icon-text is-size-6-desktop is-size-7-touch has-text-weight-semibold has-text-success is-justify-content-center">
-                  <span class="icon">
-                    <i class="fa-solid fa-code"></i>
-                  </span>
-                  <span>Code</span>
+                  <div style="display: flex; align-items: center; gap: 0.25rem;">
+                    <svg class="svgcon" viewBox="0 0 24 24" aria-hidden="true">
+                      <use href="css/icons/code-s-slash-line.svg"/>
+                    </svg>
+                    <span>Code</span>
+                  </div>
                 </span>
               </a>
             </footer>
@@ -426,10 +452,12 @@
               <a class="card-footer-item" href="https://ucsbcarpentry.github.io/workshop/2025/02/05/ucsb-containers.html" target="_blank" rel="noopener noreferrer">
                 <span class="icon-text is-size-6-desktop is-size-7-touch has-text-weight-semibold has-text-danger is-justify-content-center">
                   <span class="icon-text has-text-info is-justify-content-center">
-                    <span class="icon">
-                      <i class="fa-solid fa-link"></i>
-                    </span>
-                    <span class="has-text-info">Link</span>
+                    <div style="display: flex; align-items: center; gap: 0.25rem;">
+                      <svg class="svgcon" viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="css/icons/link-m.svg"/>
+                      </svg>
+                      <span>Link</span>
+                    </div>
                   </span>
                 </a>
               </footer>
@@ -471,18 +499,22 @@
               <footer class="card-footer">
                 <a class="card-footer-item" href="https://www.cpp.edu/sci/mathematics-statistics/docs/colloquium/2021_2022_ronald_lencevicius.pdf" target="_blank" rel="noopener noreferrer">
                   <span class="icon-text is-size-6-desktop is-size-7-touch has-text-weight-semibold has-text-danger is-justify-content-center">
-                    <span class="icon">
-                      <i class="fa-regular fa-file-pdf"></i>
-                    </span>
-                    <span>File</span>
+                    <div style="display: flex; align-items: center; gap: 0.25rem;">
+                      <svg class="svgcon" viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="css/icons/file-pdf-2-line.svg"/>
+                      </svg>
+                      <span>File</span>
+                    </div>
                   </span>
                 </a>
                 <a class="card-footer-item" href="files/RPLencevicius_ASR_Colloquium.pdf" target="_blank" rel="noopener noreferrer">
                   <span class="icon-text is-size-6-desktop is-size-7-touch has-text-weight-semibold has-text-danger is-justify-content-center">
-                    <span class="icon">
-                      <i class="fa-regular fa-file-pdf"></i>
-                    </span>
-                    <span>Slides</span>
+                    <div style="display: flex; align-items: center; gap: 0.25rem;">
+                      <svg class="svgcon" viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="css/icons/slideshow-line.svg"/>
+                      </svg>
+                      <span>Slides</span>
+                    </div>
                   </span>
                 </a>
               </footer>
@@ -527,18 +559,22 @@
               <footer class="card-footer">
                 <a class="card-footer-item" href="https://polycentric.cpp.edu/2019/08/big-data-security/" target="_blank" rel="noopener noreferrer">
                   <span class="icon-text is-size-6-desktop is-size-7-touch has-text-weight-semibold has-text-info is-justify-content-center">
-                    <span class="icon">
-                      <i class="fa-solid fa-link"></i>
-                    </span>
-                    <span class="has-text-info">Link</span>
+                    <div style="display: flex; align-items: center; gap: 0.25rem;">
+                      <svg class="svgcon" viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="css/icons/link-m.svg"/>
+                      </svg>
+                      <span>Link</span>
+                    </div>
                   </span>
                 </a>
                 <a class="card-footer-item" href="https://github.com/392781/FaceOff/raw/master/rlencevicius_poster.pdf" target="_blank" rel="noopener noreferrer">
                   <span class="icon-text is-size-6-desktop is-size-7-touch has-text-weight-semibold has-text-danger is-justify-content-center">
-                    <span class="icon">
-                      <i class="fa-regular fa-file-pdf"></i>
-                    </span>
-                    <span>Poster</span>
+                    <div style="display: flex; align-items: center; gap: 0.25rem;">
+                      <svg class="svgcon" viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="css/icons/file-pdf-2-line.svg"/>
+                      </svg>
+                      <span>Poster</span>
+                    </div>
                   </span>
                 </a>
               </footer>
@@ -554,12 +590,12 @@
         <div class="hero-body">
           <div class="container is-max-fullhd">
             <h2 class="title">
-              <span class="icon-text">
-                <span class="icon" style="margin-right: 0.25em;">
-                  <i class="fa-solid fa-handshake-angle"></i>
-                </span>
+              <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <svg class="svgcon" viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="css/icons/shake-hands-line.svg" />
+                </svg>
                 <span>Activities</span>
-              </span>
+              </div>
             </h2>
           </div>
         </div>
@@ -614,16 +650,16 @@
         <div class="container">
           <div class="content is-size-7-desktop is-size-7-touch has-text-centered">
             <p>
-              <i class="fa-regular fa-copyright"></i>
+              <svg class="svgcon" viewBox="2 2 24 24" role="img" aria-label="Copyright"><use href="css/icons/copyright.svg"/></svg>
               <span id="copyright-year">2026</span>
               <span>Ronald Lencevičius</span>
               <span><a href="mailto:contact@ronaldas.dev">contact@ronaldas.dev</a></span>
             </p>
             <p>
-              <i class="fa-solid fa-laptop-code fa-jello"></i> with <i class="fa-solid fa-beer-mug-empty fa-spin"></i> using <a href="https://bulma.io/" target="_blank" rel="noopener noreferrer">Bulma</a> and modern language models
+              <svg class="svgcon svg-animate svg-jello" viewBox="0 0 24 24" role="img" aria-label="Coded"><use href="css/icons/laptop-dev-mode.svg"/></svg> with <svg class="svgcon svg-animate svg-spin" viewBox="0 0 24 24" role="img" aria-label="lots of beer"><use href="css/icons/beer-line.svg"/></svg> using <a href="https://bulma.io/" target="_blank" rel="noopener noreferrer">Bulma</a> and modern language models
             </p>
           </div>
         </div>
       </footer>
-    </body>
-    </html>
+  </body>
+</html>

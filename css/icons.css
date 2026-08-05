@@ -27,6 +27,18 @@
   position: center;
 }
 
+.svg-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.svg-container-small {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
 /* Add size modifiers like FontAwesome */
 .svg-2x { width:2rem; height:2rem; }
 .svg-3x { width:2rem; height:2rem; }

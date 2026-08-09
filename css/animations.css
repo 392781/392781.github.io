@@ -71,12 +71,12 @@ Typing Effect
   position: absolute;
   left: 0;
   bottom: 0.2em;
-  width: 1ch;
+  width: 1.3ch;
   opacity: 1;
   animation: 
   cursor-move var(--typing-duration) steps(var(--characters)) forwards,
   blink-cursor 0.75s step-end infinite;
-  animation-delay: 0s, var(--typing-duration);
+  animation-delay: .0s, var(--typing-duration);
 }
 
 @keyframes typing {

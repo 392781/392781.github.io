@@ -12,6 +12,13 @@
 
 /* Reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
+  .type {
+    animation: none;
+    max-width: none;
+  }
+  .type-wrapper::after {
+    display: none;
+  }
   .svg-animate,
   .svg-beat,
   .svg-bounce,
@@ -32,6 +39,60 @@
   .svg-jello {
     animation: none !important;
     transition: none !important;
+  }
+}
+
+/* ============================================
+Typing Effect
+============================================ */
+:root {
+  --characters: 11;
+  --typing-duration: 1.25s;
+}
+
+.type-wrapper {
+  display: inline-block;
+  position: relative;
+  font-family: "Atkinson Mono", monospace;
+  font-display: block;
+}
+
+.type {
+  display: inline-block;
+  max-width: calc(var(--characters) * 1ch);
+  animation: typing var(--typing-duration) steps(var(--characters)) forwards;
+  white-space: nowrap;
+  overflow: hidden;
+  will-change: max-width;
+}
+
+.type-wrapper::after {
+  content: "_";
+  position: absolute;
+  left: 0;
+  bottom: 0.2em;
+  width: 1ch;
+  opacity: 1;
+  animation: 
+  cursor-move var(--typing-duration) steps(var(--characters)) forwards,
+  blink-cursor 0.75s step-end infinite;
+  animation-delay: 0s, var(--typing-duration);
+}
+
+@keyframes typing {
+  from {
+    max-width: 0;
+  }
+}
+
+@keyframes cursor-move {
+  from { left: 0; }
+  to { left: calc(var(--characters) * 1ch); }
+}
+
+@keyframes blink-cursor {
+  50% {
+    opacity: 0;
   }
 }
 

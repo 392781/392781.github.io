@@ -19,6 +19,8 @@
   <link rel="stylesheet" href="css/icons.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/styles.css"/>
+  <link rel="preload" as="image" href="img/background~2-mobile.avif" type="image/avif" media="(max-width: 768px)">
+  <link rel="preload" as="image" href="img/background~2.avif" type="image/avif" media="(min-width: 769px)">
   <link rel="preload" as="image" href="img/background~2-mobile.webp" type="image/webp" media="(max-width: 768px)">
   <link rel="preload" as="image" href="img/background~2.webp" type="image/webp" media="(min-width: 769px)">
   <link rel="preconnect" href="https://github.com/392781">
@@ -30,7 +32,9 @@
   <!-- Hero will contain a responsive navbar and centered content-->
   <section class="hero is-dark is-fullheight">
     <div class="main-hero">
-      <picture aria-hidden="true">
+      <picture>
+        <source type="image/avif" srcset="img/background~2-mobile.avif" media="(max-width: 768px)">
+        <source type="image/avif" srcset="img/background~2.avif" media="(min-width: 769px)">
         <source type="image/webp" srcset="img/background~2-mobile.webp" media="(max-width: 768px)">
         <source type="image/webp" srcset="img/background~2.webp" media="(min-width: 769px)">
         <source type="image/jpeg" srcset="img/background~2-mobile.jpg" media="(max-width: 768px)">
@@ -38,7 +42,7 @@
         <img src="img/background~2.jpg" alt="Treetop background" fetchpriority="high">
       </picture>
     </div>
-
+    
     <!-- Hero head: responsive navbar -->
     <div class="hero-head">
       <nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation">
@@ -52,9 +56,9 @@
               </svg>
             </a>
             <a class="navbar-item" href="https://scholar.google.com/citations?hl=en&user=mGdZrSAAAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
-                <svg class="svgcon svg-2x" aria-hidden="true">
-                  <use href="css/icons/sprites.svg#google-scholar"></use>
-                </svg>
+              <svg class="svgcon svg-2x" aria-hidden="true">
+                <use href="css/icons/sprites.svg#google-scholar"></use>
+              </svg>
             </a>
             <a class="navbar-item" href="mailto:contact@ronaldas.dev" target="_blank" rel="noopener noreferrer" aria-label="Email Address">
               <svg class="svgcon svg-2x" aria-hidden="true">
@@ -73,7 +77,7 @@
               <span aria-hidden="true"></span>
             </label>
           </div>
-
+          
           <div class="navbar-menu">
             <div class="visual-layer"></div>
             <div class="navbar-end has-text-centered">
@@ -86,7 +90,7 @@
         </div>
       </nav>
     </div>
-
+    
     <!-- Hero content: will be in the middle -->
     <div class="hero-body">
       <div class="container has-text-centered">
@@ -109,8 +113,8 @@
       </div>
     </div>
   </section>
-
-
+  
+  
   <!-- About Me section -->
   <section class="hero has-background-warning-soft" id="about">
     <div class="hero-body">
@@ -144,8 +148,8 @@
       </div>
     </div>
   </section>
-
-
+  
+  
   <!-- Research section -->
   <section class="hero has-background-success-soft" id="research">
     <div class="hero-body">
@@ -319,8 +323,8 @@
       </div>
     </div>
   </section>
-
-
+  
+  
   <!-- Presentations section -->
   <section class="hero has-background-danger-soft" id="presentations">
     <div class="hero-body">
@@ -580,8 +584,8 @@
           <!-- add more talks here -->
         </div>
       </section>
-
-
+      
+      
       <!-- Professional Activities section -->
       <section class="hero has-background-info-soft" id="activities">
         <div class="hero-body">
@@ -640,8 +644,8 @@
           </div>
         </div>
       </section>
-
-
+      
+      
       <!-- Footer section -->
       <footer class="footer">
         <div class="container">
@@ -658,5 +662,6 @@
           </div>
         </div>
       </footer>
-  </body>
-</html>
+    </body>
+    </html>
+    

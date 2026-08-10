@@ -38,7 +38,7 @@ Fonts
   src: url("webfonts/AtkinsonHyperlegibleMono-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
-  font-display: block;
+  font-display: swap;
 }
 
 @font-face {
@@ -46,7 +46,7 @@ Fonts
   src: url("webfonts/AtkinsonHyperlegibleMono-RegularItalic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
-  font-display: block;
+  font-display: swap;
 }
 
 @font-face {
@@ -54,7 +54,7 @@ Fonts
   src: url("webfonts/AtkinsonHyperlegibleMono-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
-  font-display: block;
+  font-display: swap;
 }
 
 @font-face {
@@ -62,7 +62,7 @@ Fonts
   src: url("webfonts/AtkinsonHyperlegibleMono-BoldItalic.woff2") format("woff2");
   font-weight: 700;
   font-style: italic;
-  font-display: block;
+  font-display: swap;
 }
 
 /* ============================================

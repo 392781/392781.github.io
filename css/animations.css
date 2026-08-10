@@ -54,6 +54,7 @@ Typing Effect
   display: inline-block;
   position: relative;
   font-family: "Atkinson Mono", monospace;
+  font-display: block;
 }
 
 .type {

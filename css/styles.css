@@ -104,6 +104,12 @@ p a:hover {
   overflow: hidden;
 }
 
+.subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* ============================================
 Navbar & Hero
 ============================================ */
@@ -199,6 +205,32 @@ Reduced Motion
   }
   .masonry-item {
     transition: none;
+  }
+}
+
+/* ============================================
+Icon Container
+============================================ */
+.icon-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.icon-container .image {
+  margin-bottom: 0;
+  max-width: 48px;
+}
+
+.icon-container img {
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .icon-container {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

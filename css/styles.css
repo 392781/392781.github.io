@@ -73,6 +73,10 @@ html {
   font-size: 115%;
 }
 
+body {
+  hyphens: auto;
+}
+
 html,
 body {
   overscroll-behavior: auto;
@@ -84,11 +88,6 @@ body,
 .subtitle,
 .navbar-item {
   font-family: "Atkinson Hyperlegible", sans-serif;
-}
-
-#name1,
-#name2 {
-  font-family: "Atkinson Mono", monospace;
 }
 
 p > a:hover,

@@ -46,7 +46,7 @@
 Typing Effect
 ============================================ */
 :root {
-  --characters: 11;
+  --characters: 14;
   --typing-duration: 1.25s;
 }
 
@@ -59,7 +59,7 @@ Typing Effect
 
 .type {
   display: inline-block;
-  max-width: 7em;
+  max-width: 14ch;
   animation: typing var(--typing-duration) steps(var(--characters)) forwards;
   white-space: nowrap;
   overflow: hidden;

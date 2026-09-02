@@ -64,7 +64,7 @@ Typing Effect
     typing var(--typing-duration) steps(var(--characters)) forwards;
   white-space: nowrap;
   overflow: hidden;
-  margin: 0 auto+0.1ch;
+  margin: 1ch auto+0.1ch;
   will-change: width;
 }
 

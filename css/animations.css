@@ -48,44 +48,48 @@ Typing Effect
 :root {
   --characters: 15;
   --typing-duration: 1.25s;
+  --delay: 1s;
 }
 
 .type-wrapper {
   display: inline-block;
   position: relative;
   font-family: "Atkinson Mono", monospace;
-  font-display: block;
 }
 
 .type {
   display: inline-block;
-  width: 15ch;
+  width: 0;
+  opacity: 0;
   white-space: nowrap;
   overflow: hidden;
-  margin: 0 auto;
   will-change: width;
-  animation: 
-    typing var(--typing-duration) steps(var(--characters)) forwards;
+  animation:
+    typing var(--typing-duration) steps(var(--characters)) var(--delay) forwards,
+    show 0s var(--delay) forwards;
 }
 
 .type-wrapper::after {
   content: "_";
   position: absolute;
+  left: 0;
   width: 1ch;
   bottom: 0.2em;
   opacity: 0.75;
-  animation: 
-    cursor-move var(--typing-duration) steps(var(--characters)) forwards,
-    blink-cursor 0.75s step-end infinite;
+  animation:
+    cursor-move var(--typing-duration) steps(var(--characters)) var(--delay) forwards,
+    blink-cursor 0.75s step-end 0s infinite;
+}
+
+@keyframes show {
+  to { opacity: 1; }
 }
 
 @keyframes typing {
-  from { width: 0; }
-  to { width: 15ch;}
+  to { width: calc(var(--characters) * 1ch);}
 }
 
 @keyframes cursor-move {
-  from { left: 0; }
   to { left: calc(var(--characters) * 1ch); }
 }
 

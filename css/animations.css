@@ -72,7 +72,7 @@ Typing Effect
   content: "_";
   position: absolute;
   width: 1ch;
-  bottom: 0.1ch;
+  bottom: 0.2em;
   opacity: 0.75;
   animation: 
     cursor-move var(--typing-duration) steps(var(--characters)) forwards,

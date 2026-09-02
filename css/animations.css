@@ -72,7 +72,7 @@ Typing Effect
   content: "_";
   position: absolute;
   width: 1ch;
-  bottom: 0.2ch;
+  bottom: 0.1ch;
   opacity: 0.75;
   animation: 
     cursor-move var(--typing-duration) steps(var(--characters)) forwards,
@@ -81,12 +81,12 @@ Typing Effect
 }
 
 @keyframes typing {
-  from { width: 0ch; }
+  from { width: 0; }
   to { width: 15ch;}
 }
 
 @keyframes cursor-move {
-  from { left: 0.1ch; }
+  from { left: 0; }
   to { left: calc(var(--characters) * 1ch); }
 }
 

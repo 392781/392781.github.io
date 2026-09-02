@@ -71,8 +71,8 @@ Typing Effect
   position: absolute;
   left: 0;
   bottom: 0.2em;
-  width: 1.3ch;
-  opacity: 1;
+  width: 1.2ch;
+  opacity: 0.75;
   animation: 
   cursor-move var(--typing-duration) steps(var(--characters)) forwards,
   blink-cursor 0.75s step-end infinite;

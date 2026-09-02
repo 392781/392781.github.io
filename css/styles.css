@@ -73,10 +73,6 @@ html {
   font-size: 115%;
 }
 
-body {
-  hyphens: auto;
-}
-
 html,
 body {
   overscroll-behavior: auto;
@@ -93,6 +89,10 @@ body,
 p > a:hover,
 p a:hover {
   text-decoration: underline;
+}
+
+.content {
+  hyphens: auto;
 }
 
 .card-footer-item:hover {

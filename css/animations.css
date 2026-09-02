@@ -60,12 +60,12 @@ Typing Effect
 .type {
   display: inline-block;
   width: 15ch;
-  animation: 
-    typing var(--typing-duration) steps(var(--characters)) forwards;
   white-space: nowrap;
   overflow: hidden;
   margin: 0 auto;
   will-change: width;
+  animation: 
+    typing var(--typing-duration) steps(var(--characters)) forwards;
 }
 
 .type-wrapper::after {
@@ -77,7 +77,6 @@ Typing Effect
   animation: 
     cursor-move var(--typing-duration) steps(var(--characters)) forwards,
     blink-cursor 0.75s step-end infinite;
-  animation-delay: .0s, var(--typing-duration);
 }
 
 @keyframes typing {

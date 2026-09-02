@@ -59,34 +59,34 @@ Typing Effect
 
 .type {
   display: inline-block;
-  max-width: 14ch;
-  animation: typing var(--typing-duration) steps(var(--characters)) forwards;
+  width: 14ch;
+  animation: 
+    typing var(--typing-duration) steps(var(--characters)) forwards;
   white-space: nowrap;
   overflow: hidden;
-  will-change: max-width;
+  margin: 0 auto+0.1ch;
+  will-change: width;
 }
 
 .type-wrapper::after {
   content: "_";
   position: absolute;
-  left: 0;
-  bottom: 0.2em;
-  width: 1.2ch;
+  width: 1ch;
+  bottom: 0.4ch;
   opacity: 0.75;
   animation: 
-  cursor-move var(--typing-duration) steps(var(--characters)) forwards,
-  blink-cursor 0.75s step-end infinite;
+    cursor-move var(--typing-duration) steps(var(--characters)) forwards,
+    blink-cursor 0.75s step-end infinite;
   animation-delay: .0s, var(--typing-duration);
 }
 
 @keyframes typing {
-  from {
-    max-width: 0;
-  }
+  from { width: 0ch; }
+  to { width: 14ch;}
 }
 
 @keyframes cursor-move {
-  from { left: 0; }
+  from { left: 0.1ch; }
   to { left: calc(var(--characters) * 1ch); }
 }
 

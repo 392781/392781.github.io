@@ -46,7 +46,7 @@
 Typing Effect
 ============================================ */
 :root {
-  --characters: 14;
+  --characters: 15;
   --typing-duration: 1.25s;
 }
 
@@ -59,12 +59,12 @@ Typing Effect
 
 .type {
   display: inline-block;
-  width: 14ch;
+  width: 15ch;
   animation: 
     typing var(--typing-duration) steps(var(--characters)) forwards;
   white-space: nowrap;
   overflow: hidden;
-  margin: 1ch auto+0.1ch;
+  margin: 0 auto;
   will-change: width;
 }
 
@@ -72,7 +72,7 @@ Typing Effect
   content: "_";
   position: absolute;
   width: 1ch;
-  bottom: 0.4ch;
+  bottom: 0.2ch;
   opacity: 0.75;
   animation: 
     cursor-move var(--typing-duration) steps(var(--characters)) forwards,
@@ -82,7 +82,7 @@ Typing Effect
 
 @keyframes typing {
   from { width: 0ch; }
-  to { width: 14ch;}
+  to { width: 15ch;}
 }
 
 @keyframes cursor-move {
